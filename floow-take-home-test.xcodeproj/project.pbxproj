@@ -7,29 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		79421338223FCF85001A0B7F /* dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79421336223FCF85001A0B7F /* dot@2x.png */; };
-		79421339223FCF85001A0B7F /* dot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79421337223FCF85001A0B7F /* dot@3x.png */; };
-		7942133B223FCFA6001A0B7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7942133A223FCFA5001A0B7F /* Assets.xcassets */; };
-		79F3DEBF223FC6FE00C17CF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F3DEBE223FC6FE00C17CF1 /* AppDelegate.m */; };
-		79F3DEC2223FC6FE00C17CF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F3DEC1223FC6FE00C17CF1 /* ViewController.m */; };
-		79F3DEC5223FC6FE00C17CF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F3DEC3223FC6FE00C17CF1 /* Main.storyboard */; };
-		79F3DECA223FC6FF00C17CF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F3DEC8223FC6FF00C17CF1 /* LaunchScreen.storyboard */; };
-		79F3DECD223FC6FF00C17CF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F3DECC223FC6FF00C17CF1 /* main.m */; };
+		799F5E6C224049A7001E02C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 799F5E61224049A7001E02C4 /* main.m */; };
+		799F5E6D224049A7001E02C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 799F5E62224049A7001E02C4 /* AppDelegate.m */; };
+		799F5E6F224049A7001E02C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799F5E65224049A7001E02C4 /* Assets.xcassets */; };
+		799F5E70224049A7001E02C4 /* dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799F5E67224049A7001E02C4 /* dot@2x.png */; };
+		799F5E71224049A7001E02C4 /* dot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799F5E68224049A7001E02C4 /* dot@3x.png */; };
+		799F5E72224049A7001E02C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799F5E6A224049A7001E02C4 /* LaunchScreen.storyboard */; };
+		799F5E73224049A7001E02C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799F5E6B224049A7001E02C4 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		79421336223FCF85001A0B7F /* dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dot@2x.png"; sourceTree = "<group>"; };
-		79421337223FCF85001A0B7F /* dot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dot@3x.png"; sourceTree = "<group>"; };
-		7942133A223FCFA5001A0B7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		799F5E60224049A7001E02C4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		799F5E61224049A7001E02C4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		799F5E62224049A7001E02C4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		799F5E63224049A7001E02C4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		799F5E65224049A7001E02C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		799F5E67224049A7001E02C4 /* dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dot@2x.png"; sourceTree = "<group>"; };
+		799F5E68224049A7001E02C4 /* dot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dot@3x.png"; sourceTree = "<group>"; };
+		799F5E6A224049A7001E02C4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		799F5E6B224049A7001E02C4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		79F3DEBA223FC6FE00C17CF1 /* floow-take-home-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "floow-take-home-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		79F3DEBD223FC6FE00C17CF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		79F3DEBE223FC6FE00C17CF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		79F3DEC0223FC6FE00C17CF1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		79F3DEC1223FC6FE00C17CF1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		79F3DEC4223FC6FE00C17CF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		79F3DEC9223FC6FF00C17CF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		79F3DECB223FC6FF00C17CF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79F3DECC223FC6FF00C17CF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,31 +40,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		79421334223FCF85001A0B7F /* asset */ = {
+		799F5E5F224049A7001E02C4 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				7942133A223FCFA5001A0B7F /* Assets.xcassets */,
-				79421335223FCF85001A0B7F /* image */,
+				799F5E60224049A7001E02C4 /* AppDelegate.h */,
+				799F5E62224049A7001E02C4 /* AppDelegate.m */,
+				799F5E63224049A7001E02C4 /* Info.plist */,
+				799F5E61224049A7001E02C4 /* main.m */,
 			);
-			name = asset;
-			path = "floow-take-home-test/asset";
+			path = iOS;
 			sourceTree = "<group>";
 		};
-		79421335223FCF85001A0B7F /* image */ = {
+		799F5E64224049A7001E02C4 /* asset */ = {
 			isa = PBXGroup;
 			children = (
-				79421336223FCF85001A0B7F /* dot@2x.png */,
-				79421337223FCF85001A0B7F /* dot@3x.png */,
+				799F5E65224049A7001E02C4 /* Assets.xcassets */,
+				799F5E66224049A7001E02C4 /* image */,
+			);
+			path = asset;
+			sourceTree = "<group>";
+		};
+		799F5E66224049A7001E02C4 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				799F5E67224049A7001E02C4 /* dot@2x.png */,
+				799F5E68224049A7001E02C4 /* dot@3x.png */,
 			);
 			path = image;
+			sourceTree = "<group>";
+		};
+		799F5E69224049A7001E02C4 /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				799F5E6A224049A7001E02C4 /* LaunchScreen.storyboard */,
+				799F5E6B224049A7001E02C4 /* Main.storyboard */,
+			);
+			path = storyboard;
 			sourceTree = "<group>";
 		};
 		79F3DEB1223FC6FE00C17CF1 = {
 			isa = PBXGroup;
 			children = (
-				79421334223FCF85001A0B7F /* asset */,
-				79F3DEBC223FC6FE00C17CF1 /* floow-take-home-test */,
+				799F5E64224049A7001E02C4 /* asset */,
+				799F5E5F224049A7001E02C4 /* iOS */,
 				79F3DEBB223FC6FE00C17CF1 /* Products */,
+				799F5E69224049A7001E02C4 /* storyboard */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,21 +94,6 @@
 				79F3DEBA223FC6FE00C17CF1 /* floow-take-home-test.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		79F3DEBC223FC6FE00C17CF1 /* floow-take-home-test */ = {
-			isa = PBXGroup;
-			children = (
-				79F3DEBD223FC6FE00C17CF1 /* AppDelegate.h */,
-				79F3DEBE223FC6FE00C17CF1 /* AppDelegate.m */,
-				79F3DEC0223FC6FE00C17CF1 /* ViewController.h */,
-				79F3DEC1223FC6FE00C17CF1 /* ViewController.m */,
-				79F3DEC3223FC6FE00C17CF1 /* Main.storyboard */,
-				79F3DEC8223FC6FF00C17CF1 /* LaunchScreen.storyboard */,
-				79F3DECB223FC6FF00C17CF1 /* Info.plist */,
-				79F3DECC223FC6FF00C17CF1 /* main.m */,
-			);
-			path = "floow-take-home-test";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,11 +153,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79F3DECA223FC6FF00C17CF1 /* LaunchScreen.storyboard in Resources */,
-				79421338223FCF85001A0B7F /* dot@2x.png in Resources */,
-				79F3DEC5223FC6FE00C17CF1 /* Main.storyboard in Resources */,
-				79421339223FCF85001A0B7F /* dot@3x.png in Resources */,
-				7942133B223FCFA6001A0B7F /* Assets.xcassets in Resources */,
+				799F5E70224049A7001E02C4 /* dot@2x.png in Resources */,
+				799F5E6F224049A7001E02C4 /* Assets.xcassets in Resources */,
+				799F5E73224049A7001E02C4 /* Main.storyboard in Resources */,
+				799F5E72224049A7001E02C4 /* LaunchScreen.storyboard in Resources */,
+				799F5E71224049A7001E02C4 /* dot@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,32 +168,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79F3DEC2223FC6FE00C17CF1 /* ViewController.m in Sources */,
-				79F3DECD223FC6FF00C17CF1 /* main.m in Sources */,
-				79F3DEBF223FC6FE00C17CF1 /* AppDelegate.m in Sources */,
+				799F5E6D224049A7001E02C4 /* AppDelegate.m in Sources */,
+				799F5E6C224049A7001E02C4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		79F3DEC3223FC6FE00C17CF1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				79F3DEC4223FC6FE00C17CF1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		79F3DEC8223FC6FF00C17CF1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				79F3DEC9223FC6FF00C17CF1 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		79F3DECE223FC6FF00C17CF1 /* Debug */ = {
@@ -312,7 +294,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = A7JM2TB6C8;
-				INFOPLIST_FILE = "floow-take-home-test/Info.plist";
+				INFOPLIST_FILE = iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,7 +312,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = A7JM2TB6C8;
-				INFOPLIST_FILE = "floow-take-home-test/Info.plist";
+				INFOPLIST_FILE = iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
