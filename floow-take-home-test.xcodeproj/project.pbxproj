@@ -7,22 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79421338223FCF85001A0B7F /* dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79421336223FCF85001A0B7F /* dot@2x.png */; };
+		79421339223FCF85001A0B7F /* dot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79421337223FCF85001A0B7F /* dot@3x.png */; };
+		7942133B223FCFA6001A0B7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7942133A223FCFA5001A0B7F /* Assets.xcassets */; };
 		79F3DEBF223FC6FE00C17CF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F3DEBE223FC6FE00C17CF1 /* AppDelegate.m */; };
 		79F3DEC2223FC6FE00C17CF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F3DEC1223FC6FE00C17CF1 /* ViewController.m */; };
 		79F3DEC5223FC6FE00C17CF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F3DEC3223FC6FE00C17CF1 /* Main.storyboard */; };
-		79F3DEC7223FC6FF00C17CF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F3DEC6223FC6FF00C17CF1 /* Assets.xcassets */; };
 		79F3DECA223FC6FF00C17CF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F3DEC8223FC6FF00C17CF1 /* LaunchScreen.storyboard */; };
 		79F3DECD223FC6FF00C17CF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F3DECC223FC6FF00C17CF1 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		79421336223FCF85001A0B7F /* dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dot@2x.png"; sourceTree = "<group>"; };
+		79421337223FCF85001A0B7F /* dot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dot@3x.png"; sourceTree = "<group>"; };
+		7942133A223FCFA5001A0B7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79F3DEBA223FC6FE00C17CF1 /* floow-take-home-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "floow-take-home-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F3DEBD223FC6FE00C17CF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		79F3DEBE223FC6FE00C17CF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		79F3DEC0223FC6FE00C17CF1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		79F3DEC1223FC6FE00C17CF1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		79F3DEC4223FC6FE00C17CF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		79F3DEC6223FC6FF00C17CF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79F3DEC9223FC6FF00C17CF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79F3DECB223FC6FF00C17CF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79F3DECC223FC6FF00C17CF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -39,9 +43,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79421334223FCF85001A0B7F /* asset */ = {
+			isa = PBXGroup;
+			children = (
+				7942133A223FCFA5001A0B7F /* Assets.xcassets */,
+				79421335223FCF85001A0B7F /* image */,
+			);
+			name = asset;
+			path = "floow-take-home-test/asset";
+			sourceTree = "<group>";
+		};
+		79421335223FCF85001A0B7F /* image */ = {
+			isa = PBXGroup;
+			children = (
+				79421336223FCF85001A0B7F /* dot@2x.png */,
+				79421337223FCF85001A0B7F /* dot@3x.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
 		79F3DEB1223FC6FE00C17CF1 = {
 			isa = PBXGroup;
 			children = (
+				79421334223FCF85001A0B7F /* asset */,
 				79F3DEBC223FC6FE00C17CF1 /* floow-take-home-test */,
 				79F3DEBB223FC6FE00C17CF1 /* Products */,
 			);
@@ -63,7 +87,6 @@
 				79F3DEC0223FC6FE00C17CF1 /* ViewController.h */,
 				79F3DEC1223FC6FE00C17CF1 /* ViewController.m */,
 				79F3DEC3223FC6FE00C17CF1 /* Main.storyboard */,
-				79F3DEC6223FC6FF00C17CF1 /* Assets.xcassets */,
 				79F3DEC8223FC6FF00C17CF1 /* LaunchScreen.storyboard */,
 				79F3DECB223FC6FF00C17CF1 /* Info.plist */,
 				79F3DECC223FC6FF00C17CF1 /* main.m */,
@@ -129,8 +152,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				79F3DECA223FC6FF00C17CF1 /* LaunchScreen.storyboard in Resources */,
-				79F3DEC7223FC6FF00C17CF1 /* Assets.xcassets in Resources */,
+				79421338223FCF85001A0B7F /* dot@2x.png in Resources */,
 				79F3DEC5223FC6FE00C17CF1 /* Main.storyboard in Resources */,
+				79421339223FCF85001A0B7F /* dot@3x.png in Resources */,
+				7942133B223FCFA6001A0B7F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
