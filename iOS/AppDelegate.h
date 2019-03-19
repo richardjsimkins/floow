@@ -1,17 +1,9 @@
-//
-//  AppDelegate.h
-//  floow-take-home-test
-//
-//  Created by Richard on 18/03/2019.
-//  Copyright © 2019 Richard Simkins. All rights reserved.
-//
+// Copyright 2019 (c) Richard J. Simkins. All rights reserved.
 
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+	@property (nonatomic, strong) UIWindow* window;
 
-@property (strong, nonatomic) UIWindow *window;
-
-
+	+ (AppDelegate*) Instance;
 @end
-

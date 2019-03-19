@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7937C51B22404B8C00404F80 /* RjsTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 7937C51A22404B8C00404F80 /* RjsTrack.m */; };
+		7937C51E22404F8900404F80 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7937C51D22404F8900404F80 /* MapKit.framework */; };
+		7937C521224115C800404F80 /* RjsContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7937C520224115C800404F80 /* RjsContainer.m */; };
+		7937C5282241193F00404F80 /* UIViewController+Rjs.m in Sources */ = {isa = PBXBuildFile; fileRef = 7937C5242241193E00404F80 /* UIViewController+Rjs.m */; };
+		7937C5292241193F00404F80 /* RjsViewControllerContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7937C5262241193E00404F80 /* RjsViewControllerContainer.m */; };
 		799F5E6C224049A7001E02C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 799F5E61224049A7001E02C4 /* main.m */; };
 		799F5E6D224049A7001E02C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 799F5E62224049A7001E02C4 /* AppDelegate.m */; };
 		799F5E6F224049A7001E02C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799F5E65224049A7001E02C4 /* Assets.xcassets */; };
@@ -17,6 +22,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7937C51922404B8C00404F80 /* RjsTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RjsTrack.h; sourceTree = "<group>"; };
+		7937C51A22404B8C00404F80 /* RjsTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RjsTrack.m; sourceTree = "<group>"; };
+		7937C51D22404F8900404F80 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7937C51F224115C800404F80 /* RjsContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RjsContainer.h; sourceTree = "<group>"; };
+		7937C520224115C800404F80 /* RjsContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RjsContainer.m; sourceTree = "<group>"; };
+		7937C5232241193E00404F80 /* UIViewController+Rjs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Rjs.h"; sourceTree = "<group>"; };
+		7937C5242241193E00404F80 /* UIViewController+Rjs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Rjs.m"; sourceTree = "<group>"; };
+		7937C5262241193E00404F80 /* RjsViewControllerContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RjsViewControllerContainer.m; sourceTree = "<group>"; };
+		7937C5272241193E00404F80 /* RjsViewControllerContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RjsViewControllerContainer.h; sourceTree = "<group>"; };
 		799F5E60224049A7001E02C4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		799F5E61224049A7001E02C4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		799F5E62224049A7001E02C4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -34,12 +48,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7937C51E22404F8900404F80 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7937C51822404B8C00404F80 /* view_controller */ = {
+			isa = PBXGroup;
+			children = (
+				7937C51F224115C800404F80 /* RjsContainer.h */,
+				7937C520224115C800404F80 /* RjsContainer.m */,
+				7937C51922404B8C00404F80 /* RjsTrack.h */,
+				7937C51A22404B8C00404F80 /* RjsTrack.m */,
+			);
+			path = view_controller;
+			sourceTree = "<group>";
+		};
+		7937C51C22404F8900404F80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7937C51D22404F8900404F80 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7937C5222241193E00404F80 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				7937C5232241193E00404F80 /* UIViewController+Rjs.h */,
+				7937C5242241193E00404F80 /* UIViewController+Rjs.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		7937C5252241193E00404F80 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				7937C5272241193E00404F80 /* RjsViewControllerContainer.h */,
+				7937C5262241193E00404F80 /* RjsViewControllerContainer.m */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
 		799F5E5F224049A7001E02C4 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,9 +134,13 @@
 			isa = PBXGroup;
 			children = (
 				799F5E64224049A7001E02C4 /* asset */,
+				7937C5252241193E00404F80 /* base */,
+				7937C5222241193E00404F80 /* category */,
+				7937C51C22404F8900404F80 /* Frameworks */,
 				799F5E5F224049A7001E02C4 /* iOS */,
 				79F3DEBB223FC6FE00C17CF1 /* Products */,
 				799F5E69224049A7001E02C4 /* storyboard */,
+				7937C51822404B8C00404F80 /* view_controller */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +183,14 @@
 				TargetAttributes = {
 					79F3DEB9223FC6FE00C17CF1 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -168,8 +232,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7937C5292241193F00404F80 /* RjsViewControllerContainer.m in Sources */,
 				799F5E6D224049A7001E02C4 /* AppDelegate.m in Sources */,
 				799F5E6C224049A7001E02C4 /* main.m in Sources */,
+				7937C51B22404B8C00404F80 /* RjsTrack.m in Sources */,
+				7937C521224115C800404F80 /* RjsContainer.m in Sources */,
+				7937C5282241193F00404F80 /* UIViewController+Rjs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
