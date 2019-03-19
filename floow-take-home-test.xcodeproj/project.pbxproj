@@ -19,6 +19,8 @@
 		799F5E71224049A7001E02C4 /* dot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799F5E68224049A7001E02C4 /* dot@3x.png */; };
 		799F5E72224049A7001E02C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799F5E6A224049A7001E02C4 /* LaunchScreen.storyboard */; };
 		799F5E73224049A7001E02C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799F5E6B224049A7001E02C4 /* Main.storyboard */; };
+		79F1BF8C22414A7E00BC8141 /* RjsPermissionLocationDenied.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F1BF8822414A7E00BC8141 /* RjsPermissionLocationDenied.m */; };
+		79F1BF8D22414A7E00BC8141 /* RjsPermissionLocationNotDetermined.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F1BF8B22414A7E00BC8141 /* RjsPermissionLocationNotDetermined.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,10 @@
 		799F5E68224049A7001E02C4 /* dot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dot@3x.png"; sourceTree = "<group>"; };
 		799F5E6A224049A7001E02C4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		799F5E6B224049A7001E02C4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		79F1BF8822414A7E00BC8141 /* RjsPermissionLocationDenied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RjsPermissionLocationDenied.m; sourceTree = "<group>"; };
+		79F1BF8922414A7E00BC8141 /* RjsPermissionLocationDenied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RjsPermissionLocationDenied.h; sourceTree = "<group>"; };
+		79F1BF8A22414A7E00BC8141 /* RjsPermissionLocationNotDetermined.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RjsPermissionLocationNotDetermined.h; sourceTree = "<group>"; };
+		79F1BF8B22414A7E00BC8141 /* RjsPermissionLocationNotDetermined.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RjsPermissionLocationNotDetermined.m; sourceTree = "<group>"; };
 		79F3DEBA223FC6FE00C17CF1 /* floow-take-home-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "floow-take-home-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -60,6 +66,10 @@
 			children = (
 				7937C51F224115C800404F80 /* RjsContainer.h */,
 				7937C520224115C800404F80 /* RjsContainer.m */,
+				79F1BF8922414A7E00BC8141 /* RjsPermissionLocationDenied.h */,
+				79F1BF8822414A7E00BC8141 /* RjsPermissionLocationDenied.m */,
+				79F1BF8A22414A7E00BC8141 /* RjsPermissionLocationNotDetermined.h */,
+				79F1BF8B22414A7E00BC8141 /* RjsPermissionLocationNotDetermined.m */,
 				7937C51922404B8C00404F80 /* RjsTrack.h */,
 				7937C51A22404B8C00404F80 /* RjsTrack.m */,
 			);
@@ -234,9 +244,11 @@
 			files = (
 				7937C5292241193F00404F80 /* RjsViewControllerContainer.m in Sources */,
 				799F5E6D224049A7001E02C4 /* AppDelegate.m in Sources */,
+				79F1BF8D22414A7E00BC8141 /* RjsPermissionLocationNotDetermined.m in Sources */,
 				799F5E6C224049A7001E02C4 /* main.m in Sources */,
 				7937C51B22404B8C00404F80 /* RjsTrack.m in Sources */,
 				7937C521224115C800404F80 /* RjsContainer.m in Sources */,
+				79F1BF8C22414A7E00BC8141 /* RjsPermissionLocationDenied.m in Sources */,
 				7937C5282241193F00404F80 /* UIViewController+Rjs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
