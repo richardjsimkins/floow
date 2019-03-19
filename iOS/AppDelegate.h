@@ -3,7 +3,8 @@
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-	@property (nonatomic, strong) UIWindow* window;
+	@property (nonatomic) UIWindow* window;
 
 	+ (AppDelegate*) Instance;
+	- (void) locationStart;
 @end

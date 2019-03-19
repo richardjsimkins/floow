@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		792F03A9224156D00094F6BC /* RjsLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 792F03A7224156D00094F6BC /* RjsLocation.m */; };
 		7937C51B22404B8C00404F80 /* RjsTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 7937C51A22404B8C00404F80 /* RjsTrack.m */; };
 		7937C51E22404F8900404F80 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7937C51D22404F8900404F80 /* MapKit.framework */; };
 		7937C521224115C800404F80 /* RjsContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7937C520224115C800404F80 /* RjsContainer.m */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		792F03A7224156D00094F6BC /* RjsLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RjsLocation.m; sourceTree = "<group>"; };
+		792F03A8224156D00094F6BC /* RjsLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RjsLocation.h; sourceTree = "<group>"; };
 		7937C51922404B8C00404F80 /* RjsTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RjsTrack.h; sourceTree = "<group>"; };
 		7937C51A22404B8C00404F80 /* RjsTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RjsTrack.m; sourceTree = "<group>"; };
 		7937C51D22404F8900404F80 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -61,6 +64,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		792F03A6224156D00094F6BC /* location */ = {
+			isa = PBXGroup;
+			children = (
+				792F03A8224156D00094F6BC /* RjsLocation.h */,
+				792F03A7224156D00094F6BC /* RjsLocation.m */,
+			);
+			path = location;
+			sourceTree = "<group>";
+		};
 		7937C51822404B8C00404F80 /* view_controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +160,7 @@
 				7937C5222241193E00404F80 /* category */,
 				7937C51C22404F8900404F80 /* Frameworks */,
 				799F5E5F224049A7001E02C4 /* iOS */,
+				792F03A6224156D00094F6BC /* location */,
 				79F3DEBB223FC6FE00C17CF1 /* Products */,
 				799F5E69224049A7001E02C4 /* storyboard */,
 				7937C51822404B8C00404F80 /* view_controller */,
@@ -242,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				792F03A9224156D00094F6BC /* RjsLocation.m in Sources */,
 				7937C5292241193F00404F80 /* RjsViewControllerContainer.m in Sources */,
 				799F5E6D224049A7001E02C4 /* AppDelegate.m in Sources */,
 				79F1BF8D22414A7E00BC8141 /* RjsPermissionLocationNotDetermined.m in Sources */,

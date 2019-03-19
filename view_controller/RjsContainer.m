@@ -4,6 +4,8 @@
 
 #import <CoreLocation/CoreLocation.h>
 
+#import "AppDelegate.h"
+
 @interface RjsContainer()
 @end
 
@@ -16,6 +18,8 @@
 			break;
 		case kCLAuthorizationStatusAuthorizedAlways:
 			[RjsContainer containerSetWithIdentifier:@"PermissionLocationAuthorized"];
+			// Also call requestAlwaysAuthorization and start location services.
+			[[AppDelegate Instance] locationStart];
 			break;
 		default:
 			[RjsContainer containerSetWithIdentifier:@"PermissionLocationNotDetermined"];

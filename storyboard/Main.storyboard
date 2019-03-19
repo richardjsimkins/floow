@@ -232,16 +232,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aob-Rr-QhS">
-                                <rect key="frame" x="9" y="254" width="357" height="159"/>
+                                <rect key="frame" x="9" y="241.5" width="357" height="184"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app requires location permissions to function properly. Please authorize the app with this permission in your settings." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1af-pw-JDZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="357" height="100.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1af-pw-JDZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="357" height="125.5"/>
+                                        <string key="text">This app requires location permissions to function while the app is running in the background. Please authorize the app with the permission "Always" in your settings.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EVZ-a8-JhK" userLabel="Button view">
-                                        <rect key="frame" x="0.0" y="121.5" width="357" height="37.5"/>
+                                        <rect key="frame" x="0.0" y="146.5" width="357" height="37.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open settings app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAf-2J-NXl">
                                                 <rect key="frame" x="9" y="6" width="339" height="25.5"/>

@@ -2,12 +2,14 @@
 
 #import "RjsPermissionLocationNotDetermined.h"
 
+#import "AppDelegate.h"
+
 @interface RjsPermissionLocationNotDetermined()
 @end
 
 @implementation RjsPermissionLocationNotDetermined
 	- (IBAction) tap:(id)sender {
-		// Tell AppDelegate to start location services.
+		[[AppDelegate Instance] locationStart];
 	}
 
 	- (void) viewWillAppear:(BOOL)animated {
