@@ -72,20 +72,30 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWD-wv-YF8">
                                 <rect key="frame" x="0.0" y="562.5" width="375" height="55.5"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRx-Kh-rHa">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRx-Kh-rHa" userLabel="Button view">
                                         <rect key="frame" x="6" y="6" width="363" height="43.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tracking on/off" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQg-Bl-VN7">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn tracking on/off" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQg-Bl-VN7">
                                                 <rect key="frame" x="3" y="9" width="357" height="25.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGX-dA-F02">
+                                                <rect key="frame" x="0.0" y="0.0" width="363" height="43.5"/>
+                                                <connections>
+                                                    <action selector="tap:" destination="zL8-6E-8Of" eventType="touchUpInside" id="GIN-Dw-44E"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="MQg-Bl-VN7" firstAttribute="leading" secondItem="rRx-Kh-rHa" secondAttribute="leading" constant="3" id="5Cl-1w-XWw"/>
+                                            <constraint firstAttribute="trailing" secondItem="LGX-dA-F02" secondAttribute="trailing" id="7N3-6J-IdK"/>
+                                            <constraint firstItem="LGX-dA-F02" firstAttribute="top" secondItem="rRx-Kh-rHa" secondAttribute="top" id="9Fi-uL-xDC"/>
                                             <constraint firstAttribute="trailing" secondItem="MQg-Bl-VN7" secondAttribute="trailing" constant="3" id="AZA-XM-l2I"/>
+                                            <constraint firstItem="LGX-dA-F02" firstAttribute="leading" secondItem="rRx-Kh-rHa" secondAttribute="leading" id="DS9-FC-7rH"/>
+                                            <constraint firstAttribute="bottom" secondItem="LGX-dA-F02" secondAttribute="bottom" id="Fua-Lj-Bta"/>
                                             <constraint firstAttribute="bottom" secondItem="MQg-Bl-VN7" secondAttribute="bottom" constant="9" id="Kmz-Xg-IrS"/>
                                             <constraint firstItem="MQg-Bl-VN7" firstAttribute="top" secondItem="rRx-Kh-rHa" secondAttribute="top" constant="9" id="xpE-gL-LMy"/>
                                         </constraints>
@@ -114,6 +124,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Track" image="Tabbar" id="WzE-UR-UL1"/>
                     <connections>
+                        <outlet property="buttonLabel" destination="MQg-Bl-VN7" id="miU-Xg-D8r"/>
                         <outlet property="map" destination="Vig-3Y-mx1" id="J4W-sU-Xlj"/>
                     </connections>
                 </viewController>

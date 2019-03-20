@@ -2,11 +2,13 @@
 
 #import <MapKit/MapKit.h>
 
-#import "AppDelegate.h"
+#import "RjsModelManager.h"
 #import "RjsTrack.h"
 
 @interface RjsTrack()
+	@property (nonatomic, weak) IBOutlet UILabel* buttonLabel;
 	@property (nonatomic, weak) IBOutlet MKMapView* map;
+	@property (nonatomic) RjsModelManager* modelManager;
 	@property (nonatomic) NSTimer* timer;
 @end
 
@@ -14,12 +16,30 @@
 	const CLLocationDistance oneKilometre = 1000;
 	const NSTimeInterval tenSeconds = 10;
 
+	- (void) buttonLabelUpdate {
+		[[self buttonLabel] setText:
+			[[self modelManager] trackingEnabled]
+				? @"Turn tracking off"
+				: @"Turn tracking on"];
+	}
+
+	- (IBAction) tap:(id)sender {
+		[[self modelManager] trackingSwitch];
+		[self buttonLabelUpdate];
+	}
+
+	- (void) viewDidLoad {
+		[self setModelManager:[[RjsModelManager alloc] init]];
+	}
+
 	- (void) viewWillAppear:(BOOL)animated {
+		[self buttonLabelUpdate];
+
 		[self setTimer:[NSTimer
 			scheduledTimerWithTimeInterval:tenSeconds
 			repeats:YES
 			block:^(NSTimer* _Nonnull timer) {
-				CLLocation* location = [[[AppDelegate Instance] modelManager] locationLast];
+				CLLocation* location = [[self modelManager] locationLast];
 
 				if (!location) return;
 

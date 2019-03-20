@@ -2,11 +2,12 @@
 
 #import "RjsLocation.h"
 
-#import "AppDelegate.h"
 #import "RjsContainer.h"
+#import "RjsModelManager.h"
 
 @interface RjsLocation()
 	@property (nonatomic) CLLocationManager* locationManager;
+	@property (nonatomic) RjsModelManager* modelManager;
 @end
 
 @implementation RjsLocation
@@ -23,6 +24,8 @@
 		[[self locationManager] setDesiredAccuracy:kCLLocationAccuracyBest];
 		[[self locationManager] setDistanceFilter:fiveMetres];
 		[[self locationManager] setPausesLocationUpdatesAutomatically:NO];
+
+		[self setModelManager:[[RjsModelManager alloc] init]];
 
 		return self;
 	}
@@ -72,7 +75,8 @@
 
 		CLLocation* location = [locations lastObject];
 		NSLog(@"%f;%f;%f edu=%f ts=%ld", [location coordinate].longitude, [location coordinate].latitude, [location altitude], [manager distanceFilter], time(0));
-		[[[AppDelegate Instance] modelManager] locationAppend:location];
+		//[[[AppDelegate Instance] modelManager] locationAppend:location];
+		[[self modelManager] locationAppend:location];
 	}
 
 	- (void) start {

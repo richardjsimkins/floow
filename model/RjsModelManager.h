@@ -3,7 +3,8 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface RjsModelManager : NSObject
-	@property (nonatomic) CLLocation* locationLast;
-
 	- (void) locationAppend:(CLLocation*)location;
+	- (CLLocation*) locationLast;
+	- (BOOL) trackingEnabled;
+	- (void) trackingSwitch;
 @end
