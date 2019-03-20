@@ -34,8 +34,34 @@
 
 	}
 
+	- (MKPolyline*) polylineFromTrackingLast {
+		NSArray* trackingCollection = [self trackingCollectionLoad];
+
+		if ([trackingCollection count] == 0) return nil;
+
+		NSArray* locationCollection = [trackingCollection lastObject];
+
+		if ([locationCollection count] == 0) return nil;
+
+		CLLocationCoordinate2D coordinateCollection[[locationCollection count]];
+		uint coordinateCollectionCount = 0;
+
+		for (NSData* data in locationCollection) {
+			CLLocation* location = (CLLocation*)[NSKeyedUnarchiver
+				unarchivedObjectOfClass:[CLLocation class]
+				fromData:data
+				error:nil];
+			coordinateCollection[coordinateCollectionCount] = location.coordinate;
+			coordinateCollectionCount++;
+		}
+
+		return [MKPolyline
+			polylineWithCoordinates:coordinateCollection
+			count:coordinateCollectionCount];
+	}
+
 	- (void) trackingAppendLocationDataToLatestRecord:(NSData*)data {
-		NSMutableArray* trackingCollection = [self trackingCollectionLoad];
+		NSMutableArray* trackingCollection = [[self trackingCollectionLoad] mutableCopy];
 
 		if ([trackingCollection count] == 0) {
 			[trackingCollection addObject:[[NSMutableArray alloc] init]];
@@ -53,7 +79,7 @@
 	}
 
 	- (void) trackingBeginNewRecord {
-		NSMutableArray* trackingCollection = [self trackingCollectionLoad];
+		NSMutableArray* trackingCollection = [[self trackingCollectionLoad] mutableCopy];
 
 		// Create the initial record for the tracking collection.
 		// Or create a new record if the existing record is populated i.e. if the existing record is
@@ -74,13 +100,13 @@
 		[self locationAppend:[self locationLast]];
 	}
 
-	- (NSMutableArray*) trackingCollectionLoad {
+	- (NSArray*) trackingCollectionLoad {
 		NSURL* documentPath = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
-		NSMutableArray* trackingCollection = [[NSMutableArray alloc]
+		NSArray* trackingCollection = [[NSArray alloc]
 			initWithContentsOfURL:[documentPath URLByAppendingPathComponent:@"tracking-collection.plist"]
 			error:nil];
 
-		if (!trackingCollection) return [[NSMutableArray alloc] init];
+		if (!trackingCollection) return [[NSArray alloc] init];
 
 		return trackingCollection;
 	}
