@@ -2,6 +2,7 @@
 
 #import "RjsLocation.h"
 
+#import "AppDelegate.h"
 #import "RjsContainer.h"
 
 @interface RjsLocation()
@@ -9,8 +10,7 @@
 @end
 
 @implementation RjsLocation
-	// 3 metres.
-	const CLLocationDistance distanceFilter = 3;
+	const CLLocationDistance fiveMetres = 5;
 
 	- (instancetype)init {
 		self = [super init];
@@ -21,7 +21,7 @@
 		[[self locationManager] setAllowsBackgroundLocationUpdates:YES];
 		[[self locationManager] setDelegate:self];
 		[[self locationManager] setDesiredAccuracy:kCLLocationAccuracyBest];
-		[[self locationManager] setDistanceFilter:distanceFilter];
+		[[self locationManager] setDistanceFilter:fiveMetres];
 		[[self locationManager] setPausesLocationUpdatesAutomatically:NO];
 
 		return self;
@@ -72,6 +72,7 @@
 
 		CLLocation* location = [locations lastObject];
 		NSLog(@"%f;%f;%f edu=%f ts=%ld", [location coordinate].longitude, [location coordinate].latitude, [location altitude], [manager distanceFilter], time(0));
+		[[[AppDelegate Instance] modelManager] locationAppend:location];
 	}
 
 	- (void) start {

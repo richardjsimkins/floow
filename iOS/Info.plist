@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>A So the app can track your route while it is running in the background.</string>
+	<string>So the app can track your route while it is running in the background.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>B So the app can track your route while it is running in the background.</string>
+	<string>So the app can track your route while it is running in the background.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>C So the app can track your route while it is running in the background.</string>
+	<string>So the app can track your route while it is running in the background.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

@@ -14,6 +14,7 @@
 		didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
 
 		[self setLocation:[[RjsLocation alloc] init]];
+		[self setModelManager:[[RjsModelManager alloc] init]];
 
 		return YES;
 	}

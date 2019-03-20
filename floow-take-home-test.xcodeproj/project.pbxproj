@@ -13,6 +13,7 @@
 		7937C521224115C800404F80 /* RjsContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7937C520224115C800404F80 /* RjsContainer.m */; };
 		7937C5282241193F00404F80 /* UIViewController+Rjs.m in Sources */ = {isa = PBXBuildFile; fileRef = 7937C5242241193E00404F80 /* UIViewController+Rjs.m */; };
 		7937C5292241193F00404F80 /* RjsViewControllerContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7937C5262241193E00404F80 /* RjsViewControllerContainer.m */; };
+		794BF9C22241B1F8002D6C4D /* RjsModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 794BF9C02241B1F8002D6C4D /* RjsModelManager.m */; };
 		799F5E6C224049A7001E02C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 799F5E61224049A7001E02C4 /* main.m */; };
 		799F5E6D224049A7001E02C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 799F5E62224049A7001E02C4 /* AppDelegate.m */; };
 		799F5E6F224049A7001E02C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799F5E65224049A7001E02C4 /* Assets.xcassets */; };
@@ -36,6 +37,8 @@
 		7937C5242241193E00404F80 /* UIViewController+Rjs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Rjs.m"; sourceTree = "<group>"; };
 		7937C5262241193E00404F80 /* RjsViewControllerContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RjsViewControllerContainer.m; sourceTree = "<group>"; };
 		7937C5272241193E00404F80 /* RjsViewControllerContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RjsViewControllerContainer.h; sourceTree = "<group>"; };
+		794BF9C02241B1F8002D6C4D /* RjsModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RjsModelManager.m; sourceTree = "<group>"; };
+		794BF9C12241B1F8002D6C4D /* RjsModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RjsModelManager.h; sourceTree = "<group>"; };
 		799F5E60224049A7001E02C4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		799F5E61224049A7001E02C4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		799F5E62224049A7001E02C4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -114,6 +117,15 @@
 			path = base;
 			sourceTree = "<group>";
 		};
+		794BF9BF2241B1F8002D6C4D /* model */ = {
+			isa = PBXGroup;
+			children = (
+				794BF9C12241B1F8002D6C4D /* RjsModelManager.h */,
+				794BF9C02241B1F8002D6C4D /* RjsModelManager.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		799F5E5F224049A7001E02C4 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +173,7 @@
 				7937C51C22404F8900404F80 /* Frameworks */,
 				799F5E5F224049A7001E02C4 /* iOS */,
 				792F03A6224156D00094F6BC /* location */,
+				794BF9BF2241B1F8002D6C4D /* model */,
 				79F3DEBB223FC6FE00C17CF1 /* Products */,
 				799F5E69224049A7001E02C4 /* storyboard */,
 				7937C51822404B8C00404F80 /* view_controller */,
@@ -258,6 +271,7 @@
 				792F03A9224156D00094F6BC /* RjsLocation.m in Sources */,
 				7937C5292241193F00404F80 /* RjsViewControllerContainer.m in Sources */,
 				799F5E6D224049A7001E02C4 /* AppDelegate.m in Sources */,
+				794BF9C22241B1F8002D6C4D /* RjsModelManager.m in Sources */,
 				79F1BF8D22414A7E00BC8141 /* RjsPermissionLocationNotDetermined.m in Sources */,
 				799F5E6C224049A7001E02C4 /* main.m in Sources */,
 				7937C51B22404B8C00404F80 /* RjsTrack.m in Sources */,
