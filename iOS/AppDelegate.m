@@ -3,6 +3,7 @@
 #import "AppDelegate.h"
 
 #import "RjsLocation.h"
+#import "RjsModelManager.h"
 
 @interface AppDelegate()
 	@property (nonatomic) RjsLocation* location;
@@ -14,6 +15,9 @@
 		didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
 
 		[self setLocation:[[RjsLocation alloc] init]];
+		RjsModelManager* modelManager = [[RjsModelManager alloc] init];
+		// Ensure we don't continue user tracking between app executions.
+		[modelManager trackingOff];
 
 		return YES;
 	}

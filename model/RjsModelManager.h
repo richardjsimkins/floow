@@ -6,5 +6,6 @@
 	- (void) locationAppend:(CLLocation*)location;
 	- (CLLocation*) locationLast;
 	- (BOOL) trackingEnabled;
+	- (void) trackingOff;
 	- (void) trackingSwitch;
 @end
