@@ -76,6 +76,9 @@
 		CLLocation* location = [locations lastObject];
 		NSLog(@"%f;%f;%f edu=%f ts=%ld", [location coordinate].longitude, [location coordinate].latitude, [location altitude], [manager distanceFilter], time(0));
 		[[self modelManager] locationAppend:location];
+		[[NSNotificationCenter defaultCenter]
+			postNotificationName:@"LocationUpdate"
+			object:nil];
 	}
 
 	- (void) powersaveOff {

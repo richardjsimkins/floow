@@ -7,7 +7,6 @@
 	@property (nonatomic, weak) IBOutlet UILabel* buttonLabel;
 	@property (nonatomic, weak) IBOutlet MKMapView* map;
 	@property (nonatomic) RjsModelManager* modelManager;
-	@property (nonatomic) NSTimer* timer;
 @end
 
 @implementation RjsTrack
@@ -21,6 +20,51 @@
 			[[self modelManager] trackingEnabled]
 				? @"Turn tracking off"
 				: @"Turn tracking on"];
+	}
+
+	- (void) locationUpdate:(NSNotification*)notification {
+		CLLocation* location = [[self modelManager] locationLast];
+
+		if (!location) return;
+
+		[[self map] removeOverlays:[[self map] overlays]];
+
+		if ([[self modelManager] trackingEnabled]) {
+			MKPolyline* polyline = [[self modelManager] polylineFromTrackingLast];
+
+			if (polyline) {
+				[[self map]
+					addOverlay:polyline
+					level:MKOverlayLevelAboveRoads];
+				MKMapRect polylineRegion = [polyline boundingMapRect];
+
+				// The polyline region may have either zero width or height if it is a
+				// straight line. We only wish to correct if neither side meets the minimum
+				// size.
+				if (!(
+					polylineRegion.size.height >= trackingPolylineRegionMinimum
+					|| polylineRegion.size.width >= trackingPolylineRegionMinimum
+				)) {
+					polylineRegion.origin.x -= (trackingPolylineRegionMinimum - polylineRegion.size.width) / 2.0;
+					polylineRegion.origin.y -= (trackingPolylineRegionMinimum - polylineRegion.size.height) / 2.0;
+					polylineRegion.size.height = trackingPolylineRegionMinimum;
+					polylineRegion.size.width = trackingPolylineRegionMinimum;
+				}
+
+				[[self map]
+					setVisibleMapRect:polylineRegion
+					edgePadding:UIEdgeInsetsMake(trackingPolylineRegionPadding, trackingPolylineRegionPadding, trackingPolylineRegionPadding, trackingPolylineRegionPadding)
+					animated:YES];
+			}
+		} else {
+			[[self map]
+				setCenterCoordinate:[location coordinate]
+				animated:YES];
+			MKCoordinateRegion region = [[self map] regionThatFits:MKCoordinateRegionMakeWithDistance([location coordinate], oneKilometre, oneKilometre)];
+			[[self map]
+				setRegion:region
+				animated:YES];
+		}
 	}
 
 	- (MKOverlayRenderer*)
@@ -41,6 +85,7 @@
 	- (IBAction) tap:(id)sender {
 		[[self modelManager] trackingSwitch];
 		[self buttonLabelUpdate];
+		[self locationUpdate:nil];
 	}
 
 	- (void) viewDidLoad {
@@ -51,53 +96,17 @@
 	- (void) viewWillAppear:(BOOL)animated {
 		[self buttonLabelUpdate];
 
-		[self setTimer:[NSTimer
-			scheduledTimerWithTimeInterval:mapUpdateDelay
-			repeats:YES
-			block:^(NSTimer* _Nonnull timer) {
-				CLLocation* location = [[self modelManager] locationLast];
+		[[NSNotificationCenter defaultCenter]
+			addObserver:self
+			selector:@selector(locationUpdate:)
+			name:@"LocationUpdate"
+			object:nil];
+	}
 
-				if (!location) return;
-
-				[[self map] removeOverlays:[[self map] overlays]];
-
-				if ([[self modelManager] trackingEnabled]) {
-					MKPolyline* polyline = [[self modelManager] polylineFromTrackingLast];
-
-					if (polyline) {
-						[[self map]
-							addOverlay:polyline
-							level:MKOverlayLevelAboveRoads];
-						MKMapRect polylineRegion = [polyline boundingMapRect];
-
-						// The polyline region may have either zero width or height if it is a
-						// straight line. We only wish to correct if neither side meets the minimum
-						// size.
-						if (!(
-							polylineRegion.size.height >= trackingPolylineRegionMinimum
-							|| polylineRegion.size.width >= trackingPolylineRegionMinimum
-						)) {
-							polylineRegion.origin.x -= (trackingPolylineRegionMinimum - polylineRegion.size.width) / 2.0;
-							polylineRegion.origin.y -= (trackingPolylineRegionMinimum - polylineRegion.size.height) / 2.0;
-							polylineRegion.size.height = trackingPolylineRegionMinimum;
-							polylineRegion.size.width = trackingPolylineRegionMinimum;
-						}
-
-						[[self map]
-							setVisibleMapRect:polylineRegion
-							edgePadding:UIEdgeInsetsMake(trackingPolylineRegionPadding, trackingPolylineRegionPadding, trackingPolylineRegionPadding, trackingPolylineRegionPadding)
-							animated:YES];
-					}
-				} else {
-					[[self map]
-						setCenterCoordinate:[location coordinate]
-						animated:YES];
-					MKCoordinateRegion region = [[self map] regionThatFits:MKCoordinateRegionMakeWithDistance([location coordinate], oneKilometre, oneKilometre)];
-					[[self map]
-						setRegion:region
-						animated:YES];
-				}
-			}
-		]];
+	- (void) viewWillDisappear:(BOOL)animated {
+		[[NSNotificationCenter defaultCenter]
+			removeObserver:self
+			name:@"LocationUpdate"
+			object:nil];
 	}
 @end
