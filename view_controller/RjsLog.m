@@ -22,18 +22,26 @@
 		}
 
 		NSArray* trackingCollection = [[self modelManager] trackingCollectionLoad];
-		uint trackingCollectionCount = 0;
 
-		for (NSArray* locationCollection in trackingCollection) {
-			if (trackingCollectionCount == [trackingCollection count]) continue;
+		if ([trackingCollection count] > 0) {
+			uint trackingCollectionCount = 0;
 
-			RjsTrackingEventRecord* trackingEventRecord = (RjsTrackingEventRecord*) [self
+			for (NSArray* locationCollection in trackingCollection) {
+				if (trackingCollectionCount == [trackingCollection count]) continue;
+
+				RjsTrackingEventRecord* trackingEventRecord = (RjsTrackingEventRecord*) [self
+					addViewControllerFromStoryboardName:@"Main"
+					withIdentifier:@"TrackingEventRecord"
+					toParentStackView:[self stackView]];
+				[[trackingEventRecord label] setText:[NSString stringWithFormat:@"Tracking event record %u", trackingCollectionCount]];
+				[trackingEventRecord setLocationCollection:locationCollection];
+				trackingCollectionCount++;
+			}
+		} else {
+			[self
 				addViewControllerFromStoryboardName:@"Main"
-				withIdentifier:@"TrackingEventRecord"
+				withIdentifier:@"TrackingEventEmpty"
 				toParentStackView:[self stackView]];
-			[[trackingEventRecord label] setText:[NSString stringWithFormat:@"Tracking event record %u", trackingCollectionCount]];
-			[trackingEventRecord setLocationCollection:locationCollection];
-			trackingCollectionCount++;
 		}
 	}
 @end

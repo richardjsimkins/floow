@@ -14,7 +14,7 @@
 
 		if ([[self locationCollection] count] > 0) {
 			NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-			[dateFormatter setDateFormat:@"dd/MM/yyyy HH:mm"];
+			[dateFormatter setDateFormat:@"dd/MM/yyyy HH:mm:ss"];
 			CLLocation* locationStart = [RjsModelManager locationFromData:[[self locationCollection] firstObject]];
 			timeStart = [dateFormatter stringFromDate:[locationStart timestamp]];
 			CLLocation* locationEnd = [RjsModelManager locationFromData:[[self locationCollection] lastObject]];
