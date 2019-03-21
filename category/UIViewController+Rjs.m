@@ -4,6 +4,28 @@
 #import "UIViewController+Rjs.h"
 
 @implementation UIViewController(Rjs)
+	- (UIViewController*)
+		addViewControllerFromStoryboardName:(NSString*)storyboardName
+		withIdentifier:(NSString*)identifier
+		toParentStackView:(UIStackView*)parentStackView {
+/*	+ (UIViewController*)
+		addToStackView:(UIStackView*)parentView
+		andViewController:(UIViewController*)parentViewController
+		withStoryboardName:(NSString*)storyboardName
+		andIdentifier:(NSString*)identifier {*/
+
+		UIStoryboard* storyboard = [UIStoryboard
+			storyboardWithName:storyboardName
+			bundle:[NSBundle mainBundle]
+		];
+		UIViewController* viewController = [storyboard instantiateViewControllerWithIdentifier:identifier];
+		[self addChildViewController:viewController];
+		[parentStackView addArrangedSubview:[viewController view]];
+		[viewController didMoveToParentViewController:self];
+
+		return viewController;
+	}
+
 	// o Recursively find the first UIViewController that matches the passed in class out of the
 	//   collection of the rootViewcontroller's childViewControllers.
 	+ (UIViewController*) childOfClass:(Class)class {
@@ -30,5 +52,11 @@
 		}
 
 		return nil;
+	}
+
+	- (void) removeViewAndSelfFromParentViewController {
+		[self willMoveToParentViewController:nil];
+		[[self view] removeFromSuperview];
+		[self removeFromParentViewController];
 	}
 @end

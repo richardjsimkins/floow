@@ -14,7 +14,6 @@
 		7937C5282241193F00404F80 /* UIViewController+Rjs.m in Sources */ = {isa = PBXBuildFile; fileRef = 7937C5242241193E00404F80 /* UIViewController+Rjs.m */; };
 		7937C5292241193F00404F80 /* RjsViewControllerContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7937C5262241193E00404F80 /* RjsViewControllerContainer.m */; };
 		7945A7712243074900B6AACC /* RjsTrackingEventRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7945A7702243074900B6AACC /* RjsTrackingEventRecord.m */; };
-		7945A774224308F100B6AACC /* RjsViewControllerComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7945A773224308F100B6AACC /* RjsViewControllerComponent.m */; };
 		7945A77722430C8E00B6AACC /* RjsLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7945A77622430C8E00B6AACC /* RjsLog.m */; };
 		794BF9C22241B1F8002D6C4D /* RjsModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 794BF9C02241B1F8002D6C4D /* RjsModelManager.m */; };
 		799F5E6C224049A7001E02C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 799F5E61224049A7001E02C4 /* main.m */; };
@@ -42,8 +41,6 @@
 		7937C5272241193E00404F80 /* RjsViewControllerContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RjsViewControllerContainer.h; sourceTree = "<group>"; };
 		7945A76F2243074900B6AACC /* RjsTrackingEventRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RjsTrackingEventRecord.h; sourceTree = "<group>"; };
 		7945A7702243074900B6AACC /* RjsTrackingEventRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RjsTrackingEventRecord.m; sourceTree = "<group>"; };
-		7945A772224308F100B6AACC /* RjsViewControllerComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RjsViewControllerComponent.h; sourceTree = "<group>"; };
-		7945A773224308F100B6AACC /* RjsViewControllerComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RjsViewControllerComponent.m; sourceTree = "<group>"; };
 		7945A77522430C8E00B6AACC /* RjsLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RjsLog.h; sourceTree = "<group>"; };
 		7945A77622430C8E00B6AACC /* RjsLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RjsLog.m; sourceTree = "<group>"; };
 		794BF9C02241B1F8002D6C4D /* RjsModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RjsModelManager.m; sourceTree = "<group>"; };
@@ -124,8 +121,6 @@
 		7937C5252241193E00404F80 /* base */ = {
 			isa = PBXGroup;
 			children = (
-				7945A772224308F100B6AACC /* RjsViewControllerComponent.h */,
-				7945A773224308F100B6AACC /* RjsViewControllerComponent.m */,
 				7937C5272241193E00404F80 /* RjsViewControllerContainer.h */,
 				7937C5262241193E00404F80 /* RjsViewControllerContainer.m */,
 			);
@@ -283,7 +278,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7945A774224308F100B6AACC /* RjsViewControllerComponent.m in Sources */,
 				792F03A9224156D00094F6BC /* RjsLocation.m in Sources */,
 				7937C5292241193F00404F80 /* RjsViewControllerContainer.m in Sources */,
 				799F5E6D224049A7001E02C4 /* AppDelegate.m in Sources */,

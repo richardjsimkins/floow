@@ -3,7 +3,6 @@
 #import "RjsTrackingEventRecord.h"
 
 @interface RjsTrackingEventRecord()
-	@property (nonatomic, weak) IBOutlet UILabel* label;
 @end
 
 @implementation RjsTrackingEventRecord

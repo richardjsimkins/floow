@@ -7,6 +7,7 @@
 	- (void) locationAppend:(CLLocation*)location;
 	- (CLLocation*) locationLast;
 	- (MKPolyline*) polylineFromTrackingLast;
+	- (NSArray*) trackingCollectionLoad;
 	- (BOOL) trackingEnabled;
 	- (void) trackingOff;
 	- (void) trackingSwitch;
