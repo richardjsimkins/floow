@@ -19,7 +19,7 @@
 		case kCLAuthorizationStatusAuthorizedAlways:
 			[RjsContainer containerSetWithIdentifier:@"PermissionLocationAuthorized"];
 			// Also call requestAlwaysAuthorization and start location services.
-			[[AppDelegate Instance] locationStart];
+			[[AppDelegate Instance] locationRequestPermission];
 			break;
 		default:
 			[RjsContainer containerSetWithIdentifier:@"PermissionLocationNotDetermined"];

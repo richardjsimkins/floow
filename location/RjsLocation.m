@@ -11,7 +11,8 @@
 @end
 
 @implementation RjsLocation
-	const CLLocationDistance fiveMetres = 5;
+	const CLLocationDistance distanceFilterLow = 3;
+	const CLLocationDistance distanceFilterHigh = 10;
 
 	- (instancetype)init {
 		self = [super init];
@@ -21,9 +22,8 @@
 		[self setLocationManager:[[CLLocationManager alloc] init]];
 		[[self locationManager] setAllowsBackgroundLocationUpdates:YES];
 		[[self locationManager] setDelegate:self];
-		[[self locationManager] setDesiredAccuracy:kCLLocationAccuracyBest];
-		[[self locationManager] setDistanceFilter:fiveMetres];
 		[[self locationManager] setPausesLocationUpdatesAutomatically:NO];
+		[self powersaveOff];
 
 		[self setModelManager:[[RjsModelManager alloc] init]];
 
@@ -75,11 +75,30 @@
 
 		CLLocation* location = [locations lastObject];
 		NSLog(@"%f;%f;%f edu=%f ts=%ld", [location coordinate].longitude, [location coordinate].latitude, [location altitude], [manager distanceFilter], time(0));
-		//[[[AppDelegate Instance] modelManager] locationAppend:location];
 		[[self modelManager] locationAppend:location];
 	}
 
-	- (void) start {
+	- (void) powersaveOff {
+		[[self locationManager] setDesiredAccuracy:kCLLocationAccuracyBest];
+		[[self locationManager] setDistanceFilter:distanceFilterHigh];
+	}
+
+	- (void) powersaveOn {
+		[[self locationManager] setDesiredAccuracy:kCLLocationAccuracyNearestTenMeters];
+		[[self locationManager] setDistanceFilter:distanceFilterLow];
+	}
+
+	- (void) requestPermission {
 		[[self locationManager] requestAlwaysAuthorization];
+	}
+
+	- (void) start {
+		if ([CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorizedAlways) return;
+
+		[[self locationManager] startUpdatingLocation];
+	}
+
+	- (void) stop {
+		[[self locationManager] stopUpdatingLocation];
 	}
 @end

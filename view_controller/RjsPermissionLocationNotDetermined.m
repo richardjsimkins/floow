@@ -9,7 +9,7 @@
 
 @implementation RjsPermissionLocationNotDetermined
 	- (IBAction) tap:(id)sender {
-		[[AppDelegate Instance] locationStart];
+		[[AppDelegate Instance] locationRequestPermission];
 	}
 
 	- (void) viewWillAppear:(BOOL)animated {

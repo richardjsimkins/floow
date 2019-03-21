@@ -6,5 +6,5 @@
 	@property (nonatomic) UIWindow* window;
 
 	+ (AppDelegate*) Instance;
-	- (void) locationStart;
+	- (void) locationRequestPermission;
 @end
