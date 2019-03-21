@@ -2,9 +2,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "RjsViewControllerComponent.h"
-
-@interface RjsTrackingEventRecord : RjsViewControllerComponent
+@interface RjsTrackingEventRecord : UIViewController
 	@property (nonatomic, weak) IBOutlet UILabel* label;
 	@property (nonatomic) NSArray* locationCollection;
 @end

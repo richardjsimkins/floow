@@ -20,6 +20,13 @@
 		}
 	}
 
+	+ (CLLocation*) locationFromData:(NSData*)data {
+		return (CLLocation*)[NSKeyedUnarchiver
+			unarchivedObjectOfClass:[CLLocation class]
+			fromData:data
+			error:nil];
+	}
+
 	- (CLLocation*) locationLast {
 		[[NSUserDefaults standardUserDefaults] synchronize];
 
@@ -27,10 +34,7 @@
 
 		if (!data) return nil;
 
-		return (CLLocation*)[NSKeyedUnarchiver
-			unarchivedObjectOfClass:[CLLocation class]
-			fromData:data
-			error:nil];
+		return [RjsModelManager locationFromData:data];
 
 	}
 

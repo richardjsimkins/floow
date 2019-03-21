@@ -8,11 +8,6 @@
 		addViewControllerFromStoryboardName:(NSString*)storyboardName
 		withIdentifier:(NSString*)identifier
 		toParentStackView:(UIStackView*)parentStackView {
-/*	+ (UIViewController*)
-		addToStackView:(UIStackView*)parentView
-		andViewController:(UIViewController*)parentViewController
-		withStoryboardName:(NSString*)storyboardName
-		andIdentifier:(NSString*)identifier {*/
 
 		UIStoryboard* storyboard = [UIStoryboard
 			storyboardWithName:storyboardName

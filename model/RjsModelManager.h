@@ -5,6 +5,7 @@
 
 @interface RjsModelManager : NSObject
 	- (void) locationAppend:(CLLocation*)location;
+	+ (CLLocation*) locationFromData:(NSData*)data;
 	- (CLLocation*) locationLast;
 	- (MKPolyline*) polylineFromTrackingLast;
 	- (NSArray*) trackingCollectionLoad;
